@@ -44,3 +44,13 @@ jobs:
           issue-message: 'You Rock!'
           # Comment to post on an individual's first pull request
           pr-message: 'Good luck!'
+          
+      - name: Check Commit Exists
+        # You may pin to the exact commit or the version.
+        # uses: betanzos/check-commit-exist@0a34c4c9fe3da5c521748447c1cefcfffd44787d
+        uses: betanzos/check-commit-exist@v1
+        with:
+          # SHA of the commit to check
+          commit: ${{ github.sha }}
+          # Inverts the action result
+          invert: false
